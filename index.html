@@ -19,19 +19,11 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Roboto',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
-
-/* REVEAL */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
 
-/* ══ NAV ══ */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:500;
-  padding:0 48px;
-  background:var(--cream);
-  border-bottom:1px solid var(--border);
-}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 48px;background:var(--cream);border-bottom:1px solid var(--border)}
 .nav-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;height:72px}
 .logo{display:flex;align-items:baseline;text-decoration:none;margin-right:40px;flex-shrink:0}
 .l-biz{font-family:'Anton',sans-serif;font-size:1.6rem;color:var(--black);letter-spacing:1px}
@@ -50,13 +42,12 @@ nav{
 .btn-start:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,100,74,.4)}
 .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none;margin-left:10px}
 .nb-bar{width:22px;height:2px;background:var(--black);border-radius:2px}
-.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);padding:20px 24px;z-index:499;flex-direction:column;gap:4px}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);padding:20px 24px;z-index:499;flex-direction:column;gap:4px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .mob-menu.open{display:flex}
 .mob-menu .nl{padding:12px 14px;font-size:.95rem}
 .mob-btns{display:flex;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
 .mob-btns a{flex:1;text-align:center;padding:11px;border-radius:9px;font-size:.85rem;font-weight:700;text-decoration:none}
 
-/* ══ HERO ══ */
 .hero{min-height:100vh;padding:130px 48px 80px;background:var(--dark);position:relative;overflow:hidden;display:flex;align-items:center}
 .hb1{position:absolute;top:-150px;right:-100px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(74,124,111,.12),transparent 65%);pointer-events:none}
 .hb2{position:absolute;bottom:-200px;left:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(240,168,50,.07),transparent 65%);pointer-events:none}
@@ -67,11 +58,10 @@ nav{
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 .hero-h1{font-family:'Anton',sans-serif;font-size:clamp(2.6rem,4.5vw,4.2rem);line-height:1.0;color:var(--white);letter-spacing:1px;margin-bottom:20px}
 .hero-h1 .yw{color:var(--sand)}
-.hero-h1 .acc{color:var(--coral)}
+.hero-h1 .ac{color:var(--coral)}
 .hero-tagline{display:inline-block;margin-bottom:18px;padding:10px 18px;background:rgba(232,100,74,.12);border:1px solid rgba(232,100,74,.25);border-radius:8px;font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.6}
 .hero-tagline strong{color:var(--coral);font-weight:700}
 .hero-desc{font-size:.98rem;color:rgba(255,255,255,.45);line-height:1.75;max-width:460px;margin-bottom:32px;font-weight:300}
-.hero-desc strong{color:rgba(255,255,255,.8);font-weight:500}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
 .cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:var(--white);font-family:'Roboto',sans-serif;font-size:.95rem;font-weight:700;padding:16px 30px;border-radius:10px;text-decoration:none;box-shadow:0 6px 24px rgba(232,100,74,.35);transition:all .25s;position:relative;overflow:hidden}
 .cta-main::after{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);animation:sheen 3.5s ease infinite}
@@ -84,7 +74,6 @@ nav{
 .hst-num span{color:var(--sand);font-family:'Georgia',serif;font-size:1.2rem}
 .hst-lbl{font-size:.68rem;color:rgba(255,255,255,.35);margin-top:3px}
 
-/* Orbital */
 .hero-orbital{position:relative;width:100%;height:520px;display:flex;align-items:center;justify-content:center}
 .orb{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.07)}
 .orb1{width:200px;height:200px;animation:spin 18s linear infinite}
@@ -102,17 +91,16 @@ nav{
 .o1c{bottom:-14px;left:50%;margin-left:-28px}
 .o1d{left:-50px;top:50%;margin-top:-13px}
 .o2a{top:-14px;left:50%;margin-left:-32px}
-.o2b{top:7%;right:1%}
-.o2c{bottom:7%;right:1%}
+.o2b{top:7%;right:0%}
+.o2c{bottom:7%;right:0%}
 .o2d{bottom:-14px;left:50%;margin-left:-54px}
-.o2e{bottom:7%;left:1%}
-.o2f{top:7%;left:1%}
+.o2e{bottom:7%;left:0%}
+.o2f{top:7%;left:0%}
 .o2g{top:50%;right:-42px;margin-top:-13px}
 .orb-center{position:absolute;width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,rgba(74,124,111,.2),rgba(74,124,111,.05));border:2px solid rgba(74,124,111,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;box-shadow:0 0 48px rgba(74,124,111,.15)}
 .oc-num{font-family:'Anton',sans-serif;font-size:1.8rem;color:var(--white);line-height:1;letter-spacing:1px}
 .oc-lbl{font-size:.5rem;color:rgba(255,255,255,.4);letter-spacing:2.5px;text-transform:uppercase;margin-top:3px}
 
-/* ══ TICKER ══ */
 .ticker{overflow:hidden;background:var(--sand);padding:13px 0}
 .ticker-track{display:flex;width:max-content;animation:tk 35s linear infinite}
 .ticker-track:hover{animation-play-state:paused}
@@ -120,42 +108,6 @@ nav{
 .ti{font-family:'Roboto',sans-serif;font-size:.82rem;font-weight:700;color:var(--black);white-space:nowrap;padding:0 22px;display:flex;align-items:center;gap:10px}
 .ts{color:rgba(0,0,0,.25)}
 
-/* ══ DIFFÉRENCE ══ */
-.diff{padding:80px 48px;background:var(--cream)}
-.diff-in{max-width:1000px;margin:0 auto}
-.diff-top{text-align:center;margin-bottom:48px}
-.diff-kicker{display:inline-flex;align-items:center;gap:8px;background:var(--coral-lt);border:1.5px solid var(--coral-md);padding:5px 16px 5px 10px;border-radius:999px;font-size:.7rem;font-weight:700;color:var(--coral);margin-bottom:18px}
-.diff-h2{font-family:'Anton',sans-serif;font-size:clamp(1.6rem,3vw,2.6rem);color:var(--black);letter-spacing:1px;line-height:1.1;margin-bottom:14px}
-.diff-h2 span{color:var(--coral)}
-.diff-p{font-size:.95rem;color:var(--muted);max-width:640px;margin:0 auto;line-height:1.8}
-.diff-grid{display:grid;grid-template-columns:1fr 52px 1fr;align-items:stretch}
-.diff-col{border-radius:20px;padding:28px 30px}
-.dc-bad{background:var(--white);border:1.5px solid var(--border)}
-.dc-good{background:var(--black);border:1.5px solid var(--black)}
-.dc-bad::before{content:'';display:block;height:3px;background:repeating-linear-gradient(90deg,var(--border) 0,var(--border) 8px,transparent 8px,transparent 16px);margin:-28px -30px 20px;border-radius:18px 18px 0 0}
-.dc-good::before{content:'';display:block;height:3px;background:linear-gradient(90deg,var(--sage),var(--sky),var(--lav),var(--coral),var(--sand));margin:-28px -30px 20px;border-radius:18px 18px 0 0}
-.dc-lbl{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;display:block}
-.dc-bad .dc-lbl{color:var(--muted)}
-.dc-good .dc-lbl{color:var(--sage)}
-.dc-ttl{font-family:'Anton',sans-serif;font-size:1rem;letter-spacing:.5px;margin-bottom:16px}
-.dc-bad .dc-ttl{color:var(--black)}
-.dc-good .dc-ttl{color:var(--white)}
-.dc-list{display:flex;flex-direction:column;gap:8px}
-.dc-it{display:flex;gap:10px;padding:10px 12px;border-radius:9px;border:1.5px solid;font-size:.82rem;line-height:1.5;align-items:flex-start;transition:all .2s}
-.dc-bad .dc-it{background:var(--cream);border-color:var(--border);color:var(--text)}
-.dc-bad .dc-it:hover{border-color:#FFCCCC;background:#FFF8F8}
-.dc-good .dc-it{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.06);color:rgba(255,255,255,.7)}
-.dc-good .dc-it:hover{background:rgba(74,124,111,.08);border-color:rgba(74,124,111,.2)}
-.dc-it strong{font-weight:700}
-.dc-good .dc-it strong{color:var(--white)}
-.dit-b{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:900;flex-shrink:0;margin-top:1px}
-.bad-b{background:#FFEEEE;color:#CC3333;border:1.5px solid #FFCCCC}
-.good-b{background:rgba(74,124,111,.15);color:var(--sage);border:1.5px solid rgba(74,124,111,.3)}
-.diff-vs{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 14px}
-.vs-ln{width:1px;flex:1;background:linear-gradient(to bottom,transparent,var(--border),transparent)}
-.vs-bd{width:44px;height:44px;border-radius:50%;background:var(--cream);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:.7rem;color:var(--muted);flex-shrink:0}
-
-/* ══ ACCOMPAGNEMENT ══ */
 .acc{padding:100px 48px;background:var(--dark);position:relative;overflow:hidden}
 .acc::before{content:'';position:absolute;top:-100px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,124,111,.08),transparent 70%);pointer-events:none}
 .acc-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative;z-index:1}
@@ -163,7 +115,7 @@ nav{
 .dk::before{content:'';width:20px;height:2px;background:#F5C842;border-radius:2px}
 .acc-h2{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);color:var(--white);letter-spacing:1px;line-height:1.05;margin-bottom:18px}
 .acc-h2 span{color:#F5C842}
-.acc-desc{font-size:.92rem;color:rgba(255,255,255,.42);line-height:1.8;margin-bottom:28px;max-width:440px}
+.acc-desc{font-size:.92rem;color:rgba(255,255,255,.42);line-height:1.8;margin-bottom:28px}
 .acc-pillars{display:flex;flex-direction:column;gap:10px}
 .acc-pillar{display:flex;align-items:flex-start;gap:14px;padding:15px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;transition:all .2s}
 .acc-pillar:hover{border-color:rgba(74,124,111,.3);background:rgba(74,124,111,.07);transform:translateX(4px)}
@@ -174,7 +126,6 @@ nav{
 .api4{background:rgba(91,143,212,.15);border:1px solid rgba(91,143,212,.2)}
 .ap-title{font-size:.86rem;font-weight:700;color:var(--white);margin-bottom:2px}
 .ap-sub{font-size:.73rem;color:rgba(255,255,255,.38);line-height:1.5}
-/* Cards droite */
 .acc-cards{display:flex;flex-direction:column;gap:14px}
 .acc-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:22px;transition:all .25s;position:relative;overflow:hidden}
 .acc-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px}
@@ -187,26 +138,24 @@ nav{
 .ac-title{font-family:'Anton',sans-serif;font-size:.92rem;color:var(--white);letter-spacing:.5px;margin-bottom:5px}
 .ac-desc{font-size:.75rem;color:rgba(255,255,255,.38);line-height:1.6}
 
-/* ══ PACKS ══ */
-.packs{padding:120px 48px;background:var(--cream)}
-.packs-in{max-width:1100px;margin:0 auto}
-.sk{font-family:'Roboto',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sage);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.sk::before{content:'';width:20px;height:2px;background:var(--sage);border-radius:2px}
-.packs-h2{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);color:var(--black);letter-spacing:1px;line-height:1.05;margin-bottom:12px}
-.packs-h2 em{font-style:normal;color:var(--sage)}
-.packs-sub{font-size:.92rem;color:var(--muted);max-width:520px;margin-bottom:52px;line-height:1.7}
+.packs{padding:120px 48px;background:var(--dark);position:relative;overflow:hidden}
+.packs::before{content:'';position:absolute;top:-120px;right:-80px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(91,143,212,.08),transparent 65%);pointer-events:none}
+.packs::after{content:'';position:absolute;bottom:-100px;left:-60px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(139,114,190,.07),transparent 65%);pointer-events:none}
+.packs-in{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.sk{font-family:'Roboto',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.sk::before{content:'';width:20px;height:2px;background:var(--sky);border-radius:2px}
+.packs-h2{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);color:var(--white);letter-spacing:1px;line-height:1.05;margin-bottom:12px}
+.packs-h2 em{font-style:normal;color:var(--sky)}
+.packs-sub{font-size:.92rem;color:rgba(255,255,255,.42);max-width:520px;margin-bottom:52px;line-height:1.7}
 .packs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.pack{background:var(--white);border:1.5px solid var(--border);border-radius:22px;padding:32px;position:relative;overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
+.pack{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);border-radius:22px;padding:32px;position:relative;overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
 .pack::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
 .pk1::before{background:linear-gradient(90deg,var(--sage),#6aada0)}
 .pk2::before{background:linear-gradient(90deg,var(--coral),#f07a5f)}
 .pk3::before{background:linear-gradient(90deg,var(--sky),#7aaee8)}
 .pk4::before{background:linear-gradient(90deg,var(--lav),#a98fd4)}
-.pack:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(0,0,0,.08)}
-.pk1:hover{border-color:var(--sage-md)}
-.pk2:hover{border-color:var(--coral-md)}
-.pk3:hover{border-color:#B8D1F0}
-.pk4:hover{border-color:#CDBFEA}
+.pack:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(0,0,0,.25)}
+.pk1:hover{border-color:rgba(74,124,111,.4)}.pk2:hover{border-color:rgba(232,100,74,.4)}.pk3:hover{border-color:rgba(91,143,212,.4)}.pk4:hover{border-color:rgba(139,114,190,.4)}
 .pk-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
 .pk-ico{font-size:1.6rem;width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .pki1{background:var(--sage-lt);border:1.5px solid var(--sage-md)}
@@ -214,21 +163,21 @@ nav{
 .pki3{background:var(--sky-lt);border:1.5px solid #B8D1F0}
 .pki4{background:var(--lav-lt);border:1.5px solid #CDBFEA}
 .pk-pr{text-align:right}
-.pk-price{font-family:'Anton',sans-serif;font-size:1.8rem;color:var(--black);letter-spacing:1px;line-height:1}
-.pk-psub{font-size:.62rem;color:var(--muted);margin-top:2px}
-.pk-name{font-family:'Anton',sans-serif;font-size:1rem;color:var(--black);letter-spacing:.5px;margin-bottom:5px}
-.pk-tagline{font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:14px}
-/* Messagerie badge */
+.pk-price{font-family:'Anton',sans-serif;font-size:1.8rem;color:var(--white);letter-spacing:1px;line-height:1}
+.pk-psub{font-size:.62rem;color:rgba(255,255,255,.35);margin-top:2px}
+.pk-name{font-family:'Anton',sans-serif;font-size:1rem;color:var(--white);letter-spacing:.5px;margin-bottom:5px}
+.pk-tagline{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.6;margin-bottom:14px}
 .pk-msg{display:flex;align-items:center;gap:9px;padding:9px 13px;border-radius:9px;margin-bottom:14px;font-size:.78rem;font-weight:700;border:1.5px solid}
 .pk1 .pk-msg{background:var(--sage-lt);border-color:var(--sage-md);color:var(--sage)}
 .pk2 .pk-msg{background:var(--coral-lt);border-color:var(--coral-md);color:var(--coral)}
 .pk3 .pk-msg{background:var(--sky-lt);border-color:#B8D1F0;color:var(--sky)}
 .pk4 .pk-msg{background:var(--lav-lt);border-color:#CDBFEA;color:var(--lav)}
-.pk-list{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.pk-it{display:flex;align-items:flex-start;gap:8px;font-size:.79rem;color:var(--text);line-height:1.45}
+.pk-list{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.pk-it{display:flex;align-items:flex-start;gap:8px;font-size:.79rem;color:rgba(255,255,255,.7);line-height:1.45}
 .pk-chk{width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.5rem;font-weight:900;color:var(--white);flex-shrink:0;margin-top:2px}
 .c1{background:var(--sage)}.c2{background:var(--coral)}.c3{background:var(--sky)}.c4{background:var(--lav)}
-/* KPI secteur */
+.pk-option{display:flex;align-items:center;gap:8px;font-size:.76rem;color:rgba(255,255,255,.5);padding:7px 10px;border-radius:7px;border:1px dashed rgba(240,168,50,.3);margin-bottom:10px;background:rgba(240,168,50,.05)}
+.pk-option-tag{font-size:.58rem;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--sand-lt);color:var(--sand);border:1px solid var(--sand-md);white-space:nowrap;flex-shrink:0}
 .pk-kpi{margin:10px 0;padding:11px 13px;border-radius:9px;border:1px dashed}
 .pk1 .pk-kpi{border-color:var(--sage-md);background:rgba(74,124,111,.04)}
 .pk2 .pk-kpi{border-color:var(--coral-md);background:rgba(232,100,74,.04)}
@@ -237,12 +186,12 @@ nav{
 .pk-kpi-lbl{font-size:.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:7px;display:flex;align-items:center;gap:6px}
 .pk-kpi-lbl::after{content:'';flex:1;height:1px;background:var(--border)}
 .pk-kpi-chips{display:flex;flex-wrap:wrap;gap:5px}
-.kc{font-size:.6rem;font-weight:600;padding:3px 9px;border-radius:5px;background:var(--cream);border:1px solid var(--border);color:var(--text)}
-.pk-docs{padding-top:12px;border-top:1.5px solid var(--border);margin-bottom:16px}
+.kc{font-size:.6rem;font-weight:600;padding:3px 9px;border-radius:5px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.6)}
+.pk-docs{padding-top:12px;border-top:1.5px solid rgba(255,255,255,.08);margin-bottom:16px}
 .pk-docs-lbl{font-size:.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:7px;display:flex;align-items:center;gap:6px}
 .pk-docs-lbl::after{content:'';flex:1;height:1px;background:var(--border)}
 .pk-doc-tags{display:flex;flex-wrap:wrap;gap:4px}
-.pk-dt{font-size:.59rem;font-weight:500;padding:3px 8px;border-radius:5px;background:var(--cream);border:1px solid var(--border);color:var(--text)}
+.pk-dt{font-size:.59rem;font-weight:500;padding:3px 8px;border-radius:5px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55)}
 .pk-cta-wrap{margin-top:auto}
 .pk-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;border-radius:10px;border:none;font-family:'Roboto',sans-serif;font-size:.88rem;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none}
 .pcta1{background:var(--sage);color:var(--white)}.pcta1:hover{background:#3d6b60;transform:translateY(-1px)}
@@ -250,7 +199,6 @@ nav{
 .pcta3{background:var(--sky);color:var(--white)}.pcta3:hover{background:#4a7ec0;transform:translateY(-1px)}
 .pcta4{background:var(--lav);color:var(--white)}.pcta4:hover{background:#7a62a8;transform:translateY(-1px)}
 
-/* ══ TIMELINE ══ */
 .journey{padding:120px 48px;background:var(--dark2);position:relative;overflow:hidden}
 .journey::before{content:'';position:absolute;left:-80px;top:50%;transform:translateY(-50%);width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(240,168,50,.06),transparent 70%);pointer-events:none}
 .journey-in{max-width:1100px;margin:0 auto;position:relative;z-index:1}
@@ -260,7 +208,7 @@ nav{
 .journey-sub{font-size:.92rem;color:rgba(255,255,255,.38);max-width:500px;margin:0 auto;line-height:1.7}
 .journey-line{position:relative;display:flex;flex-direction:column}
 .journey-line::before{content:'';position:absolute;left:20px;top:24px;bottom:24px;width:2px;background:linear-gradient(to bottom,transparent,rgba(245,200,66,.35) 10%,rgba(245,200,66,.35) 90%,transparent)}
-.journey-item{display:grid;grid-template-columns:44px 200px 1fr;gap:0 28px;align-items:flex-start;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.05);transition:all .2s}
+.journey-item{display:grid;grid-template-columns:44px 200px 1fr;gap:0 28px;align-items:flex-start;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.05)}
 .journey-item:last-child{border-bottom:none}
 .journey-item:hover .jdot{background:var(--sand);box-shadow:0 0 20px rgba(245,200,66,.5)}
 .jdot{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.2);margin-top:6px;transition:all .3s;position:relative;z-index:1;margin-left:12px}
@@ -273,7 +221,6 @@ nav{
 .j-name{font-size:.76rem;font-weight:700;color:rgba(255,255,255,.8)}
 .j-role{font-size:.62rem;color:rgba(255,255,255,.32);margin-top:1px}
 
-/* ══ FAQ ══ */
 .faq{padding:100px 48px;background:var(--dark)}
 .faq-in{max-width:760px;margin:0 auto}
 .faq-list{margin-top:52px;display:flex;flex-direction:column;gap:8px}
@@ -288,7 +235,6 @@ nav{
 .fi.open .fia{max-height:200px}
 .fia-in{padding:0 22px 16px;font-size:.82rem;color:rgba(255,255,255,.38);line-height:1.75}
 
-/* ══ CTA FINAL ══ */
 .cta-final{padding:80px 48px;background:var(--cream)}
 .cta-block{background:var(--black);border-radius:28px;padding:80px;text-align:center;border:1.5px solid rgba(240,168,50,.1);position:relative;overflow:hidden}
 .cta-block::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(240,168,50,.07),transparent 70%);pointer-events:none}
@@ -303,9 +249,8 @@ nav{
 .btn-owh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.5);font-family:'Roboto',sans-serif;font-size:.88rem;font-weight:500;padding:16px 24px;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,.12);transition:all .2s}
 .btn-owh:hover{color:var(--white);border-color:rgba(255,255,255,.25)}
 .cta-note{font-size:.7rem;color:rgba(255,255,255,.22);margin-top:18px;position:relative;z-index:1}
-.cta-note strong{color:#F5C842;font-weight:700}
+.cta-note strong{color:#F5C842}
 
-/* ══ FOOTER ══ */
 footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
 .ft-logo{display:flex;align-items:baseline;text-decoration:none}
 .ftb{font-family:'Anton',sans-serif;font-size:1.3rem;color:var(--white);letter-spacing:1px}
@@ -317,7 +262,6 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
 .ft-links a:hover{color:rgba(255,255,255,.7)}
 .ft-copy{font-size:.66rem;color:rgba(255,255,255,.14)}
 
-/* ══ RESPONSIVE ══ */
 @media(max-width:900px){
   nav{padding:0 20px}
   .nav-links,.nav-avail{display:none}
@@ -329,39 +273,30 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
   .orb2{width:220px!important;height:220px!important}
   .orb1{width:130px!important;height:130px!important}
   .hero-stats{flex-wrap:wrap;gap:20px}
-  .hero-ctas{flex-wrap:wrap}
-  .diff{padding:60px 24px}
-  .diff-grid{grid-template-columns:1fr;gap:0}
-  .diff-vs{flex-direction:row;padding:10px 0}
-  .vs-ln{flex:none!important;width:50px!important;height:1px!important}
   .acc{padding:60px 24px}
   .acc-in{grid-template-columns:1fr;gap:40px}
   .packs{padding:80px 24px}
   .packs-grid{grid-template-columns:1fr}
   .journey{padding:80px 24px}
   .journey-item{grid-template-columns:44px 1fr;grid-template-rows:auto auto}
-  .j-experts{grid-column:1/-1;padding-left:20px}
+  .j-experts{grid-column:1/-1;padding-left:20px;margin-top:12px}
   .faq{padding:80px 24px}
   .cta-final{padding:60px 24px}
   .cta-block{padding:48px 28px}
-  footer{padding:32px 20px;flex-direction:column;gap:20px}
+  footer{padding:32px 20px;flex-direction:column;align-items:flex-start;gap:20px}
 }
 @media(max-width:600px){
   .cta-btns{flex-direction:column;align-items:stretch}
   .cta-btns a{text-align:center;justify-content:center}
-  .diff-grid{gap:10px}
-  .acc-in{gap:32px}
+  .hero-h1{font-size:2.4rem}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="nav">
   <div class="nav-in">
-    <a class="logo" href="#">
-      <span class="l-biz">Biz</span><span class="l-pilot">Pilot</span><span class="l-apos">'</span>
-    </a>
+    <a class="logo" href="#"><span class="l-biz">Biz</span><span class="l-pilot">Pilot</span><span class="l-apos">'</span></a>
     <div class="nav-links">
       <a class="nl" href="#accompagnement">Notre approche</a>
       <a class="nl" href="#packs">Nos packs</a>
@@ -372,16 +307,11 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
       <div class="nav-avail"><div class="nav-dot"></div>Experts disponibles</div>
       <a class="btn-login" href="https://app.bizpilot.fr/login" target="_blank">Connexion</a>
       <a class="btn-start" href="#packs">Démarrer →</a>
-      <div class="nav-burger" onclick="toggleMenu()" id="burger">
-        <div class="nb-bar"></div>
-        <div class="nb-bar"></div>
-        <div class="nb-bar"></div>
-      </div>
+      <div class="nav-burger" onclick="toggleMenu()" id="burger"><div class="nb-bar"></div><div class="nb-bar"></div><div class="nb-bar"></div></div>
     </div>
   </div>
 </nav>
 
-<!-- MENU MOBILE -->
 <div class="mob-menu" id="mob-menu">
   <a class="nl" href="#accompagnement" onclick="toggleMenu()">Notre approche</a>
   <a class="nl" href="#packs" onclick="toggleMenu()">Nos packs</a>
@@ -393,17 +323,12 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
   </div>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="hero">
   <div class="hb1"></div><div class="hb2"></div><div class="hgrid"></div>
   <div class="hero-in">
     <div class="rv">
       <div class="hero-badge"><div class="hero-badge-dot"></div>120+ experts certifiés disponibles</div>
-      <h1 class="hero-h1">POUR VOTRE<br>ENTREPRISE,<br><span class="yw">TOUS LES EXPERTS</span><br>QU'IL VOUS <span class="acc">FAUT !</span></h1>
-      <div class="hero-tagline">
-        Les autres vous donnent un Kbis.<br>
-        <strong>Nous, nous construisons votre réussite.</strong>
-      </div>
+      <h1 class="hero-h1">POUR VOTRE<br>ENTREPRISE,<br><span class="yw">TOUS LES EXPERTS</span><br>QU'IL VOUS <span class="ac">FAUT !</span></h1>
       <p class="hero-desc">Juristes, avocats, comptables, coaches, designers — tous les spécialistes dont vous avez besoin, au bon moment, pour chaque étape de votre aventure.</p>
       <div class="hero-ctas">
         <a class="cta-main" href="#packs">Choisir mon pack →</a>
@@ -433,121 +358,29 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
           <div class="wp o2g">Transmission</div>
         </div>
         <div class="orb orb3"></div>
-        <div class="orb-center">
-          <div class="oc-num">120</div>
-          <div class="oc-lbl">experts</div>
-        </div>
+        <div class="orb-center"><div class="oc-num">120</div><div class="oc-lbl">experts</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-track">
-    <span class="ti">Stratégie d'entreprise <span class="ts">✦</span></span>
-    <span class="ti">Droit des affaires <span class="ts">✦</span></span>
-    <span class="ti">Levée de fonds <span class="ts">✦</span></span>
-    <span class="ti">Marketing digital <span class="ts">✦</span></span>
-    <span class="ti">Ressources humaines <span class="ts">✦</span></span>
-    <span class="ti">Finance & comptabilité <span class="ts">✦</span></span>
-    <span class="ti">Transmission & cession <span class="ts">✦</span></span>
-    <span class="ti">Propriété intellectuelle <span class="ts">✦</span></span>
-    <span class="ti">Coach & développement <span class="ts">✦</span></span>
-    <span class="ti">Branding & Design <span class="ts">✦</span></span>
-    <span class="ti">Stratégie d'entreprise <span class="ts">✦</span></span>
-    <span class="ti">Droit des affaires <span class="ts">✦</span></span>
-    <span class="ti">Levée de fonds <span class="ts">✦</span></span>
-    <span class="ti">Marketing digital <span class="ts">✦</span></span>
-    <span class="ti">Ressources humaines <span class="ts">✦</span></span>
-    <span class="ti">Finance & comptabilité <span class="ts">✦</span></span>
-    <span class="ti">Transmission & cession <span class="ts">✦</span></span>
-    <span class="ti">Propriété intellectuelle <span class="ts">✦</span></span>
-    <span class="ti">Coach & développement <span class="ts">✦</span></span>
-    <span class="ti">Branding & Design <span class="ts">✦</span></span>
+    <span class="ti">Stratégie d'entreprise <span class="ts">✦</span></span><span class="ti">Droit des affaires <span class="ts">✦</span></span><span class="ti">Levée de fonds <span class="ts">✦</span></span><span class="ti">Marketing digital <span class="ts">✦</span></span><span class="ti">Ressources humaines <span class="ts">✦</span></span><span class="ti">Finance & comptabilité <span class="ts">✦</span></span><span class="ti">Transmission & cession <span class="ts">✦</span></span><span class="ti">Propriété intellectuelle <span class="ts">✦</span></span><span class="ti">Coach & développement <span class="ts">✦</span></span><span class="ti">Branding & Design <span class="ts">✦</span></span><span class="ti">Stratégie d'entreprise <span class="ts">✦</span></span><span class="ti">Droit des affaires <span class="ts">✦</span></span><span class="ti">Levée de fonds <span class="ts">✦</span></span><span class="ti">Marketing digital <span class="ts">✦</span></span><span class="ti">Ressources humaines <span class="ts">✦</span></span><span class="ti">Finance & comptabilité <span class="ts">✦</span></span><span class="ti">Transmission & cession <span class="ts">✦</span></span><span class="ti">Propriété intellectuelle <span class="ts">✦</span></span><span class="ti">Coach & développement <span class="ts">✦</span></span><span class="ti">Branding & Design <span class="ts">✦</span></span>
   </div>
 </div>
 
-
-
-<!-- ACCOMPAGNEMENT -->
-<section class="acc" id="accompagnement">
-  <div class="acc-in">
-    <div class="rv">
-      <div class="dk">Notre engagement</div>
-      <h2 class="acc-h2">Nous vous<br><span>accompagnons</span><br>à chaque étape</h2>
-      <p class="acc-desc">BizPilot n'est pas une plateforme de formulaires. C'est un écosystème d'experts humains qui travaillent pour vous, en équipe, au bon moment.</p>
-      <div class="acc-pillars">
-        <div class="acc-pillar rv d1">
-          <div class="ap-ico api1">🤝</div>
-          <div>
-            <div class="ap-title">Un expert dédié à chaque pack</div>
-            <div class="ap-sub">Un professionnel certifié vous est assigné dès votre commande et vous accompagne jusqu'à la livraison.</div>
-          </div>
-        </div>
-        <div class="acc-pillar rv d2">
-          <div class="ap-ico api2">📋</div>
-          <div>
-            <div class="ap-title">Documents personnalisés et validés</div>
-            <div class="ap-sub">Chaque document est rédigé, relu et signé par un expert qualifié. Pas de template générique.</div>
-          </div>
-        </div>
-        <div class="acc-pillar rv d3">
-          <div class="ap-ico api3">📞</div>
-          <div>
-            <div class="ap-title">30 jours de suivi après livraison</div>
-            <div class="ap-sub">Votre expert reste disponible un mois après la remise pour répondre à toutes vos questions.</div>
-          </div>
-        </div>
-        <div class="acc-pillar rv d4">
-          <div class="ap-ico api4">🔄</div>
-          <div>
-            <div class="ap-title">De la création à la cession</div>
-            <div class="ap-sub">Un seul endroit pour toutes les étapes de votre aventure entrepreneuriale.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="acc-cards rv d2">
-      <div class="acc-card ac1">
-        <div class="ac-icon">🏆</div>
-        <div class="ac-title">EXPERTS CERTIFIÉS RC PRO</div>
-        <div class="ac-desc">Tous vérifiés, diplômés et assurés. Minimum 5 ans d'expérience avant toute certification BizPilot. Notés après chaque mission.</div>
-      </div>
-      <div class="acc-card ac2">
-        <div class="ac-icon">🔒</div>
-        <div class="ac-title">DONNÉES SÉCURISÉES</div>
-        <div class="ac-desc">Hébergement France, chiffrement SSL, conformité RGPD totale. Vos données sensibles ne quittent jamais notre infrastructure.</div>
-      </div>
-      <div class="acc-card ac3">
-        <div class="ac-icon">↩️</div>
-        <div class="ac-title">SATISFAIT OU REMBOURSÉ 30J</div>
-        <div class="ac-desc">Si le livrable ne vous convient pas, on le refait avec un autre expert. Sans question, sans condition.</div>
-      </div>
-      <div class="acc-card ac4">
-        <div class="ac-icon">💬</div>
-        <div class="ac-title">TOUJOURS DISPONIBLES</div>
-        <div class="ac-desc">Messagerie illimitée incluse dans tous les packs. Posez vos questions, obtenez des réponses précises, sans limite de messages.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PACKS -->
 <section class="packs" id="packs">
   <div class="packs-in">
     <div class="rv">
       <div class="sk">4 packs clé en main</div>
       <h2 class="packs-h2">L'accompagnement qu'il vous faut<br><em>à chaque étape</em></h2>
-      <p class="packs-sub">Experts humains dédiés, messagerie illimitée, documents personnalisés, outils KPI selon votre secteur — tout inclus, clé en main.</p>
+      <p class="packs-sub">Experts humains dédiés, messagerie illimitée, documents personnalisés et outils KPI selon votre secteur — tout inclus, clé en main.</p>
     </div>
     <div class="packs-grid">
 
       <div class="pack pk1 rv d1">
-        <div class="pk-top">
-          <div class="pk-ico pki1">🌱</div>
-          <div class="pk-pr"><div class="pk-price">490 €</div><div class="pk-psub">pack complet</div></div>
-        </div>
+        <div class="pk-top"><div class="pk-ico pki1">🌱</div><div class="pk-pr"><div class="pk-price">490 €</div><div class="pk-psub">pack complet</div></div></div>
         <div class="pk-name">IDÉATION & CRÉATION</div>
         <div class="pk-tagline">De l'idée validée au Kbis — nos experts posent les fondations solides de votre entreprise.</div>
         <div class="pk-msg">💬 Messagerie illimitée avec vos experts incluse</div>
@@ -559,35 +392,20 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
           <div class="pk-it"><div class="pk-chk c1">✓</div>2h d'expert dédié (avocat et coach business)</div>
           <div class="pk-it"><div class="pk-chk c1">✓</div>Suivi personnalisé 30 jours après livraison</div>
         </div>
+        <div class="pk-option"><span class="pk-option-tag">OPTION</span>🎨 Charte graphique complète (logo, couleurs, typographie)</div>
         <div class="pk-kpi">
           <div class="pk-kpi-lbl">Outils KPI inclus selon votre secteur</div>
-          <div class="pk-kpi-chips">
-            <span class="kc">Taux de conversion</span>
-            <span class="kc">Coût d'acquisition</span>
-            <span class="kc">MRR prévisionnel</span>
-            <span class="kc">Break-even</span>
-          </div>
+          <div class="pk-kpi-chips"><span class="kc">Taux de conversion</span><span class="kc">Coût d'acquisition</span><span class="kc">MRR prévisionnel</span><span class="kc">Break-even</span></div>
         </div>
         <div class="pk-docs">
           <div class="pk-docs-lbl">5 documents personnalisés inclus</div>
-          <div class="pk-doc-tags">
-            <span class="pk-dt">Statuts sur-mesure</span>
-            <span class="pk-dt">Pacte d'associés</span>
-            <span class="pk-dt">CGV / CGU</span>
-            <span class="pk-dt">Mentions légales</span>
-            <span class="pk-dt">Contrat de prestation</span>
-          </div>
+          <div class="pk-doc-tags"><span class="pk-dt">Statuts sur-mesure</span><span class="pk-dt">Pacte d'associés</span><span class="pk-dt">CGV / CGU</span><span class="pk-dt">Mentions légales</span><span class="pk-dt">Contrat de prestation</span></div>
         </div>
-        <div class="pk-cta-wrap">
-          <a class="pk-cta pcta1" href="#contact">Choisir ce pack →</a>
-        </div>
+        <div class="pk-cta-wrap"><a class="pk-cta pcta1" href="#contact">Choisir ce pack →</a></div>
       </div>
 
       <div class="pack pk2 rv d2">
-        <div class="pk-top">
-          <div class="pk-ico pki2">🚀</div>
-          <div class="pk-pr"><div class="pk-price">990 €</div><div class="pk-psub">pack complet</div></div>
-        </div>
+        <div class="pk-top"><div class="pk-ico pki2">🚀</div><div class="pk-pr"><div class="pk-price">990 €</div><div class="pk-psub">pack complet</div></div></div>
         <div class="pk-name">CROISSANCE & ACCÉLÉRATION</div>
         <div class="pk-tagline">Passez à la vitesse supérieure — nos experts vous propulsent vers vos prochains objectifs.</div>
         <div class="pk-msg">💬 Messagerie illimitée avec vos experts incluse</div>
@@ -597,38 +415,21 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
           <div class="pk-it"><div class="pk-chk c2">✓</div>Stratégie de financement (BPI, levée de fonds)</div>
           <div class="pk-it"><div class="pk-chk c2">✓</div>Plan de recrutement pour vos 3 premiers postes</div>
           <div class="pk-it"><div class="pk-chk c2">✓</div>5h d'experts dédiés (coach business, growth, RH)</div>
+          <div class="pk-it"><div class="pk-chk c2">✓</div>Suivi personnalisé 30 jours après livraison</div>
         </div>
         <div class="pk-kpi">
           <div class="pk-kpi-lbl">Outils KPI inclus selon votre secteur</div>
-          <div class="pk-kpi-chips">
-            <span class="kc">CAC / LTV ratio</span>
-            <span class="kc">Churn rate</span>
-            <span class="kc">Pipeline de vente</span>
-            <span class="kc">ROI marketing</span>
-          </div>
+          <div class="pk-kpi-chips"><span class="kc">CAC / LTV ratio</span><span class="kc">Churn rate</span><span class="kc">Pipeline de vente</span><span class="kc">ROI marketing</span></div>
         </div>
         <div class="pk-docs">
           <div class="pk-docs-lbl">7 documents personnalisés inclus</div>
-          <div class="pk-doc-tags">
-            <span class="pk-dt">Contrats CDI / CDD</span>
-            <span class="pk-dt">NDA</span>
-            <span class="pk-dt">Contrats commerciaux</span>
-            <span class="pk-dt">Contrat de partenariat</span>
-            <span class="pk-dt">Politique RGPD</span>
-            <span class="pk-dt">Accord confidentialité</span>
-            <span class="pk-dt">CGV B2B</span>
-          </div>
+          <div class="pk-doc-tags"><span class="pk-dt">Contrats CDI / CDD</span><span class="pk-dt">NDA</span><span class="pk-dt">Contrats commerciaux</span><span class="pk-dt">Contrat de partenariat</span><span class="pk-dt">Politique RGPD</span><span class="pk-dt">Accord confidentialité</span><span class="pk-dt">CGV B2B</span></div>
         </div>
-        <div class="pk-cta-wrap">
-          <a class="pk-cta pcta2" href="#contact">Choisir ce pack →</a>
-        </div>
+        <div class="pk-cta-wrap"><a class="pk-cta pcta2" href="#contact">Choisir ce pack →</a></div>
       </div>
 
       <div class="pack pk3 rv d3">
-        <div class="pk-top">
-          <div class="pk-ico pki3">⚙️</div>
-          <div class="pk-pr"><div class="pk-price">790 €</div><div class="pk-psub">pack complet</div></div>
-        </div>
+        <div class="pk-top"><div class="pk-ico pki3">⚙️</div><div class="pk-pr"><div class="pk-price">790 €</div><div class="pk-psub">pack complet</div></div></div>
         <div class="pk-name">GESTION & OPTIMISATION</div>
         <div class="pk-tagline">Sécurisez et optimisez votre quotidien pour vous concentrer sur ce qui compte vraiment.</div>
         <div class="pk-msg">💬 Messagerie illimitée avec vos experts incluse</div>
@@ -638,37 +439,21 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
           <div class="pk-it"><div class="pk-chk c3">✓</div>Mise en conformité sociale et RH</div>
           <div class="pk-it"><div class="pk-chk c3">✓</div>Tableau de bord KPI personnalisé</div>
           <div class="pk-it"><div class="pk-chk c3">✓</div>4h d'experts dédiés (expert-comptable, juriste, coach)</div>
+          <div class="pk-it"><div class="pk-chk c3">✓</div>Suivi personnalisé 30 jours après livraison</div>
         </div>
         <div class="pk-kpi">
           <div class="pk-kpi-lbl">Outils KPI inclus selon votre secteur</div>
-          <div class="pk-kpi-chips">
-            <span class="kc">Trésorerie nette</span>
-            <span class="kc">Marge opérationnelle</span>
-            <span class="kc">EBE / EBITDA</span>
-            <span class="kc">Délai moyen paiement</span>
-          </div>
+          <div class="pk-kpi-chips"><span class="kc">Trésorerie nette</span><span class="kc">Marge opérationnelle</span><span class="kc">EBE / EBITDA</span><span class="kc">Délai moyen paiement</span></div>
         </div>
         <div class="pk-docs">
           <div class="pk-docs-lbl">6 documents personnalisés inclus</div>
-          <div class="pk-doc-tags">
-            <span class="pk-dt">Règlement intérieur</span>
-            <span class="pk-dt">Accord télétravail</span>
-            <span class="pk-dt">Charte informatique</span>
-            <span class="pk-dt">Contrats fournisseurs</span>
-            <span class="pk-dt">MAJ statuts</span>
-            <span class="pk-dt">Procédures internes</span>
-          </div>
+          <div class="pk-doc-tags"><span class="pk-dt">Règlement intérieur</span><span class="pk-dt">Accord télétravail</span><span class="pk-dt">Charte informatique</span><span class="pk-dt">Contrats fournisseurs</span><span class="pk-dt">MAJ statuts</span><span class="pk-dt">Procédures internes</span></div>
         </div>
-        <div class="pk-cta-wrap">
-          <a class="pk-cta pcta3" href="#contact">Choisir ce pack →</a>
-        </div>
+        <div class="pk-cta-wrap"><a class="pk-cta pcta3" href="#contact">Choisir ce pack →</a></div>
       </div>
 
       <div class="pack pk4 rv d4">
-        <div class="pk-top">
-          <div class="pk-ico pki4">🔄</div>
-          <div class="pk-pr"><div class="pk-price">1 990 €</div><div class="pk-psub">pack complet</div></div>
-        </div>
+        <div class="pk-top"><div class="pk-ico pki4">🔄</div><div class="pk-pr"><div class="pk-price">1 990 €</div><div class="pk-psub">pack complet</div></div></div>
         <div class="pk-name">TRANSMISSION & CESSION</div>
         <div class="pk-tagline">Préparez et réussissez votre sortie — de la valorisation à la signature, nos experts vous guident.</div>
         <div class="pk-msg">💬 Messagerie illimitée avec vos experts incluse</div>
@@ -678,39 +463,45 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
           <div class="pk-it"><div class="pk-chk c4">✓</div>Mémorandum de vente et data room virtuelle</div>
           <div class="pk-it"><div class="pk-chk c4">✓</div>Accompagnement à la négociation</div>
           <div class="pk-it"><div class="pk-chk c4">✓</div>8h d'experts dédiés (avocat M&A, comptable, notaire)</div>
+          <div class="pk-it"><div class="pk-chk c4">✓</div>Suivi personnalisé 30 jours après livraison</div>
         </div>
         <div class="pk-kpi">
           <div class="pk-kpi-lbl">Outils KPI inclus selon votre secteur</div>
-          <div class="pk-kpi-chips">
-            <span class="kc">Multiple d'EBITDA</span>
-            <span class="kc">Valorisation DCF</span>
-            <span class="kc">Ratio dette/EBITDA</span>
-            <span class="kc">Actif net comptable</span>
-          </div>
+          <div class="pk-kpi-chips"><span class="kc">Multiple d'EBITDA</span><span class="kc">Valorisation DCF</span><span class="kc">Ratio dette/EBITDA</span><span class="kc">Actif net comptable</span></div>
         </div>
         <div class="pk-docs">
           <div class="pk-docs-lbl">8 documents personnalisés inclus</div>
-          <div class="pk-doc-tags">
-            <span class="pk-dt">Protocole de cession</span>
-            <span class="pk-dt">Garantie actif/passif</span>
-            <span class="pk-dt">Pacte d'actionnaires</span>
-            <span class="pk-dt">Actes de cession</span>
-            <span class="pk-dt">Management transition</span>
-            <span class="pk-dt">Lettre d'intention</span>
-            <span class="pk-dt">NDA acquéreur</span>
-            <span class="pk-dt">Term sheet</span>
-          </div>
+          <div class="pk-doc-tags"><span class="pk-dt">Protocole de cession</span><span class="pk-dt">Garantie actif/passif</span><span class="pk-dt">Pacte d'actionnaires</span><span class="pk-dt">Actes de cession</span><span class="pk-dt">Management transition</span><span class="pk-dt">Lettre d'intention</span><span class="pk-dt">NDA acquéreur</span><span class="pk-dt">Term sheet</span></div>
         </div>
-        <div class="pk-cta-wrap">
-          <a class="pk-cta pcta4" href="#contact">Choisir ce pack →</a>
-        </div>
+        <div class="pk-cta-wrap"><a class="pk-cta pcta4" href="#contact">Choisir ce pack →</a></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- TIMELINE -->
+<section class="acc" id="accompagnement">
+  <div class="acc-in">
+    <div class="rv">
+      <div class="dk">Notre engagement</div>
+      <h2 class="acc-h2">Les meilleurs experts<br><span>pour votre réussite</span></h2>
+      <p class="acc-desc">BizPilot n'est pas une plateforme de formulaires. C'est un écosystème d'experts humains qui travaillent pour vous, en équipe, au bon moment.</p>
+      <div class="acc-pillars">
+        <div class="acc-pillar rv d1"><div class="ap-ico api1">🤝</div><div><div class="ap-title">Un expert dédié à chaque pack</div><div class="ap-sub">Un professionnel certifié vous est assigné dès votre commande et vous accompagne jusqu'à la livraison.</div></div></div>
+        <div class="acc-pillar rv d2"><div class="ap-ico api2">📋</div><div><div class="ap-title">Documents personnalisés et validés</div><div class="ap-sub">Chaque document est rédigé, relu et signé par un expert qualifié. Pas de template générique.</div></div></div>
+        <div class="acc-pillar rv d3"><div class="ap-ico api3">📞</div><div><div class="ap-title">30 jours de suivi après livraison</div><div class="ap-sub">Votre expert reste disponible un mois après la remise pour répondre à toutes vos questions.</div></div></div>
+        <div class="acc-pillar rv d4"><div class="ap-ico api4">🔄</div><div><div class="ap-title">De la création à la cession</div><div class="ap-sub">Un seul endroit pour toutes les étapes de votre aventure entrepreneuriale.</div></div></div>
+      </div>
+    </div>
+    <div class="acc-cards rv d2">
+      <div class="acc-card ac1"><div class="ac-icon">🏆</div><div class="ac-title">EXPERTS CERTIFIÉS RC PRO</div><div class="ac-desc">Tous vérifiés, diplômés et assurés. Minimum 5 ans d'expérience avant toute certification BizPilot.</div></div>
+      <div class="acc-card ac2"><div class="ac-icon">🔒</div><div class="ac-title">DONNÉES SÉCURISÉES</div><div class="ac-desc">Hébergement France, chiffrement SSL, conformité RGPD totale. Vos données ne quittent jamais notre infrastructure.</div></div>
+      <div class="acc-card ac3"><div class="ac-icon">↩️</div><div class="ac-title">SATISFAIT OU REMBOURSÉ 30J</div><div class="ac-desc">Si le livrable ne vous convient pas, on le refait avec un autre expert. Sans question, sans condition.</div></div>
+      <div class="acc-card ac4"><div class="ac-icon">💬</div><div class="ac-title">TOUJOURS DISPONIBLES</div><div class="ac-desc">Messagerie illimitée incluse dans tous les packs. Posez vos questions, sans limite de messages.</div></div>
+    </div>
+  </div>
+</section>
+
 <section class="journey" id="parcours">
   <div class="journey-in">
     <div class="journey-hd rv">
@@ -759,7 +550,6 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq" id="faq">
   <div class="faq-in">
     <div class="rv" style="text-align:center;margin-bottom:0">
@@ -767,35 +557,16 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
       <h2 class="journey-h2" style="text-align:center;margin-bottom:8px">Tout ce que vous <em>voulez savoir</em></h2>
     </div>
     <div class="faq-list rv">
-      <div class="fi open">
-        <div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Les documents sont-ils vraiment personnalisés ?</span><div class="fi-tog">+</div></div>
-        <div class="fia"><div class="fia-in">Oui, 100% personnalisés. Nos experts analysent votre secteur, votre structure et votre situation avant de rédiger quoi que ce soit. Vous recevez un document qui vous ressemble, pas un template.</div></div>
-      </div>
-      <div class="fi">
-        <div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Qui sont les experts et comment sont-ils sélectionnés ?</span><div class="fi-tog">+</div></div>
-        <div class="fia"><div class="fia-in">Tous nos experts sont des professionnels certifiés avec minimum 5 ans d'expérience. Nous vérifions leurs diplômes, leurs assurances RC Pro et réalisons des missions test avant toute certification.</div></div>
-      </div>
-      <div class="fi">
-        <div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Que se passe-t-il si je ne suis pas satisfait ?</span><div class="fi-tog">+</div></div>
-        <div class="fia"><div class="fia-in">Nous offrons une garantie satisfait ou remboursé de 30 jours sans conditions. Si le livrable ne vous convient pas, nous le refaisons avec un autre expert. Vous n'êtes jamais perdant.</div></div>
-      </div>
-      <div class="fi">
-        <div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Combien de temps pour recevoir mon Kbis ?</span><div class="fi-tog">+</div></div>
-        <div class="fia"><div class="fia-in">72h en moyenne après validation de votre dossier par nos experts. Votre expert suit votre dossier en temps réel et vous informe à chaque étape.</div></div>
-      </div>
-      <div class="fi">
-        <div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">La messagerie est-elle vraiment illimitée ?</span><div class="fi-tog">+</div></div>
-        <div class="fia"><div class="fia-in">Oui, incluse dans tous nos packs. Échangez en direct avec vos experts autant que nécessaire, posez vos questions, partagez des documents — sans limite de messages ni de temps.</div></div>
-      </div>
-      <div class="fi">
-        <div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Les packs sont-ils cumulables ?</span><div class="fi-tog">+</div></div>
-        <div class="fia"><div class="fia-in">Absolument. Beaucoup de clients commencent par Idéation & Création puis enchaînent avec Croissance & Accélération. Chaque pack est conçu pour être complémentaire selon votre étape.</div></div>
-      </div>
+      <div class="fi open"><div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Les documents sont-ils vraiment personnalisés ?</span><div class="fi-tog">+</div></div><div class="fia"><div class="fia-in">Oui, 100% personnalisés. Nos experts analysent votre secteur, votre structure et votre situation avant de rédiger quoi que ce soit. Vous recevez un document qui vous ressemble, pas un template.</div></div></div>
+      <div class="fi"><div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Qui sont les experts et comment sont-ils sélectionnés ?</span><div class="fi-tog">+</div></div><div class="fia"><div class="fia-in">Tous nos experts sont des professionnels certifiés avec minimum 5 ans d'expérience. Nous vérifions leurs diplômes, leurs assurances RC Pro et réalisons des missions test avant toute certification.</div></div></div>
+      <div class="fi"><div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Que se passe-t-il si je ne suis pas satisfait ?</span><div class="fi-tog">+</div></div><div class="fia"><div class="fia-in">Nous offrons une garantie satisfait ou remboursé de 30 jours sans conditions. Si le livrable ne vous convient pas, nous le refaisons avec un autre expert. Vous n'êtes jamais perdant.</div></div></div>
+      <div class="fi"><div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Combien de temps pour recevoir mon Kbis ?</span><div class="fi-tog">+</div></div><div class="fia"><div class="fia-in">72h en moyenne après validation de votre dossier par nos experts. Votre expert suit votre dossier en temps réel et vous informe à chaque étape.</div></div></div>
+      <div class="fi"><div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">La messagerie est-elle vraiment illimitée ?</span><div class="fi-tog">+</div></div><div class="fia"><div class="fia-in">Oui, incluse dans tous nos packs. Échangez en direct avec vos experts autant que nécessaire, posez vos questions, partagez des documents — sans limite de messages ni de temps.</div></div></div>
+      <div class="fi"><div class="fiq" onclick="toggleFaq(this)"><span class="fiq-t">Les packs sont-ils cumulables ?</span><div class="fi-tog">+</div></div><div class="fia"><div class="fia-in">Absolument. Beaucoup de clients commencent par Idéation & Création puis enchaînent avec Croissance & Accélération. Chaque pack est conçu pour être complémentaire selon votre étape.</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
 <section class="cta-final" id="contact">
   <div style="max-width:1100px;margin:0 auto">
     <div class="cta-block rv">
@@ -804,19 +575,16 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
       <p class="cta-sub">Experts humains, documents sur-mesure, messagerie illimitée et suivi personnalisé — tout ce qu'il vous faut pour réussir, clé en main.</p>
       <div class="cta-btns">
         <a href="#packs" class="btn-yw">Choisir mon pack →</a>
-        <a href="mailto:hello@bizpilot.fr" class="btn-owh">Parler à un expert d'abord</a>
+        <a href="/cdn-cgi/l/email-protection#afc7cac3c3c0efcdc6d5dfc6c3c0db81c9dd" class="btn-owh">Parler à un expert d'abord</a>
       </div>
       <p class="cta-note">Satisfait ou remboursé <strong>30 jours</strong> · Experts disponibles maintenant · Prix transparents</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div>
-    <a class="ft-logo" href="#">
-      <span class="ftb">Biz</span><span class="ftp">Pilot</span><span class="fta">'</span>
-    </a>
+    <a class="ft-logo" href="#"><span class="ftb">Biz</span><span class="ftp">Pilot</span><span class="fta">'</span></a>
     <div class="ft-tag">Le copilote complet de votre aventure entrepreneuriale</div>
   </div>
   <div class="ft-links">
@@ -832,28 +600,25 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
 </footer>
 
 <script>
-// Scroll reveal
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('in'); });
 }, { threshold: 0.08 });
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+document.querySelectorAll('.rv').forEach(function(el) { obs.observe(el); });
 
-// FAQ accordion
 function toggleFaq(el) {
-  const item = el.closest('.fi');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.fi').forEach(i => i.classList.remove('open'));
-  if(!isOpen) item.classList.add('open');
+  var item = el.closest('.fi');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.fi').forEach(function(i) { i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
 }
 
-// Menu mobile
 function toggleMenu() {
   document.getElementById('mob-menu').classList.toggle('open');
 }
 document.addEventListener('click', function(e) {
-  const menu = document.getElementById('mob-menu');
-  const burger = document.getElementById('burger');
-  if(menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
+  var menu = document.getElementById('mob-menu');
+  var burger = document.getElementById('burger');
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
     menu.classList.remove('open');
   }
 });
